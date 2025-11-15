@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lien vers le CSS séparé -->
+    <link rel="stylesheet" href="/Mandanda-onglets/css/mandanda-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Fan Page Mandanda évènements</title>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <button class="burger-menu" aria-label="Menu" aria-expanded="false">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </button>
+            <a href="/Index.html" class="logo-mobile">
+                <img src="/images/Image_20251106_131302_815.png" alt="logo OM">
+            </a>
+            <h1>FanPage OM dédié à Steve Mandanda</h1>
+        </div>
+
+        <div class="menu-overlay">
+            <div class="menu-overlay-inner">
+                <ul class="menu-overlay-nav">
+                    <li class="menu-overlay-item"><a class="menu-overlay-link" href="/Mandanda-onglets/index.html"><span><div>Accueil</div></span></a></li>
+                    <li class="menu-overlay-item"><a class="menu-overlay-link" href="/Mandanda-onglets/actualite.html"><span><div>Actualité</div></span></a></li>
+                    <li class="menu-overlay-item"><a class="menu-overlay-link" href="/Mandanda-onglets/biographie.html"><span><div>Biographie</div></span></a></li>
+                    <li class="menu-overlay-item"><a class="menu-overlay-link" href="/Mandanda-onglets/event.html"><span><div>Évènements</div></span></a></li>
+                    <li class="menu-overlay-item"><a class="menu-overlay-link" href="/Mandanda-onglets/chronologie.html"><span><div>Chronologie</div></span></a></li>
+                    <li class="menu-overlay-item"><a class="menu-overlay-link" href="/Mandanda-onglets/contact.html"><span><div>Contact</div></span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <nav>
+            <a href="/Index.html" class="logo">
+                <img src="/images/Image_20251106_131302_815.png" alt="logo OM">
+            </a>
+            <ul>
+                <li><a href="/Mandanda-onglets/index.html">Accueil</a></li>
+                <li><a href="/Mandanda-onglets/actualite.html">Actualité</a></li>
+                <li><a href="/Mandanda-onglets/biographie.html">Biographie</a></li>
+                <li><a href="/Mandanda-onglets/event.html">Évènements</a></li>
+                <li><a href="/Mandanda-onglets/chronologie.html">Chronologie</a></li>
+                <li><a href="/Mandanda-onglets/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Exemple de contenu -->
+        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p></div>
+        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p></div>
+        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p></div>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="/Index.html" class="logo-footer">
+                <img src="/images/Image_20251106_131302_815.png" alt="logo OM">
+            </a>
+            <ul>
+                <li><a href="/Mandanda-onglets/index.html">Accueil</a></li>
+                <li><a href="/Mandanda-onglets/actualite.html">Actualité</a></li>
+                <li><a href="/Mandanda-onglets/biographie.html">Biographie</a></li>
+                <li><a href="/Mandanda-onglets/event.html">Évènements</a></li>
+                <li><a href="/Mandanda-onglets/chronologie.html">Chronologie</a></li>
+                <li><a href="/Mandanda-onglets/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        const burgerMenu = document.querySelector('.burger-menu');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const body = document.body;
+
+        burgerMenu.addEventListener('click', function() {
+            burgerMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            body.classList.toggle('menu-open');
+            burgerMenu.setAttribute('aria-expanded', burgerMenu.classList.contains('active'));
+        });
+
+        const menuLinks = document.querySelectorAll('.menu-overlay-link');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                burgerMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                body.classList.remove('menu-open');
+                burgerMenu.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>

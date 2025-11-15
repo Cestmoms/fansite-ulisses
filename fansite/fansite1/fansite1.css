@@ -1,0 +1,277 @@
+/* ==========================================================
+   fansite1.css - Styles spécifiques au fansite Ulisses Garcia
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   1) Couleurs officielles OM (OKLCH)
+---------------------------------------------------------- */
+:root {
+  --color-om-blue: oklch(64.14% 0.14096247183780242 237.44293354297707);
+  --color-om-gold: oklch(73.26% 0.102 86.07);
+  --color-om-gold-dark: oklch(50.2% 0.102 86.07);
+
+  --color-white: oklch(100% 0 106.37);
+  --color-black: oklch(31.7% 0.102 86.07);
+
+  --blue: var(--color-om-blue);
+  --gold: var(--color-om-gold);
+}
+
+/* ----------------------------------------------------------
+   2) Styles généraux
+---------------------------------------------------------- */
+h2 {
+  color: var(--blue);
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+header nav a {
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+header nav a:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* ----------------------------------------------------------
+   3) Images principales
+---------------------------------------------------------- */
+main img {
+  display: block;
+  max-width: 60%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* ----------------------------------------------------------
+   4) Cartes génériques
+---------------------------------------------------------- */
+.card,
+.news-card,
+.achievement-card,
+.event-card,
+.link-card {
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  margin-bottom: 16px;
+}
+
+.card {
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* ----------------------------------------------------------
+   5) Actualités
+---------------------------------------------------------- */
+.news-card {
+  overflow: hidden;
+}
+
+.news-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 12px 16px;
+}
+
+.news-content h3 {
+  margin-top: 0;
+  color: var(--blue);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+}
+
+/* ----------------------------------------------------------
+   6) Réalisations
+---------------------------------------------------------- */
+.achievement-card {
+  overflow: hidden;
+}
+
+.achievement-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.achievement-content {
+  padding: 12px 16px;
+}
+
+.achievement-content h3 {
+  margin-top: 0;
+  color: var(--blue);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+}
+
+/* ----------------------------------------------------------
+   7) Événements
+---------------------------------------------------------- */
+.event-card {
+  overflow: hidden;
+}
+
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 14px 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.event-date {
+  background: var(--blue);
+  color: var(--color-white);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.event-info h3 {
+  margin: 6px 0 8px;
+  font-family: "Poppins", sans-serif;
+  color: var(--blue);
+}
+
+/* ----------------------------------------------------------
+   8) Liens utiles
+---------------------------------------------------------- */
+.links-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  transition: transform .15s ease, box-shadow .15s ease;
+  text-decoration: none;
+}
+
+.link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.link-card .icon {
+  font-size: 1.8rem;
+  width: 48px;
+  height: 48px;
+  background: var(--blue);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14px;
+}
+
+.link-card h3 {
+  margin: 0;
+  color: var(--blue);
+  font-family: "Poppins", sans-serif;
+}
+
+.link-card p {
+  margin: 4px 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* ----------------------------------------------------------
+   9) Formulaire contact
+---------------------------------------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 8px;
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  background: var(--gold);
+  color: var(--color-white);
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--blue);
+}
+
+/* ----------------------------------------------------------
+   10) Galerie photos
+---------------------------------------------------------- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 30%;
+  min-width: 160px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ----------------------------------------------------------
+   11) Responsive
+---------------------------------------------------------- */
+@media (max-width: 600px) {
+  main img {
+    max-width: 90%;
+  }
+
+  .gallery img {
+    width: 48%;
+  }
+
+  .news-card img,
+  .achievement-card img,
+  .event-card img {
+    height: 150px;
+  }
+}

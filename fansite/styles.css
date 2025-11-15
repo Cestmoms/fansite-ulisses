@@ -1,0 +1,136 @@
+/* ======================================================
+   STYLES.CSS
+   Thème Domicile / Extérieur - Ulisses Garcia (OM)
+   ====================================================== */
+
+/* -------------------------------
+   Couleurs OM (palette officielle)
+---------------------------------- */
+
+/* Couleurs principales (oklch pour précision chromatique) */
+:root {
+  --color-om-blue: oklch(64.14% 0.14096247183780242 237.44293354297707);
+  --color-om-gold: oklch(73.26% 0.102 86.07);
+  --color-om-gold-dark: oklch(50.2% 0.102 86.07);
+
+  /* Couleurs de base */
+  --color-white: oklch(100% 0 106.37);
+  --color-black: oklch(31.7% 0.102 86.07);
+
+  /* Thème par défaut = Domicile */
+  --primary: var(--color-om-blue);
+  --accent: var(--color-om-gold);
+  --bg: var(--color-white);
+  --text: var(--color-black);
+  --header-bg: var(--primary);
+  --link: var(--accent);
+}
+
+/* -------------------------------
+   Thème Extérieur (inverse les tons)
+---------------------------------- */
+:root[data-theme="away"] {
+  --primary: var(--color-white);
+  --accent: var(--color-om-gold-dark);
+  --bg: var(--color-black);
+  --text: var(--color-white);
+  --header-bg: var(--color-om-blue);
+  --link: var(--accent);
+}
+
+/* -------------------------------
+   Style général du site
+---------------------------------- */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+/* -------------------------------
+   Header & Footer
+---------------------------------- */
+header, footer {
+  background: var(--header-bg);
+  color: var(--color-white);
+  text-align: center;
+  padding: 16px;
+}
+
+header h1 {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+/* -------------------------------
+   Navigation
+---------------------------------- */
+nav ul {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--link);
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--color-white);
+  transition: 0.3s;
+}
+
+/* -------------------------------
+   Contenu principal
+---------------------------------- */
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+main img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* -------------------------------
+   Bouton de bascule Domicile / Extérieur
+---------------------------------- */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--color-white);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+/* -------------------------------
+   Responsive
+---------------------------------- */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
